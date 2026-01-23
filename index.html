@@ -2,130 +2,106 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>Sohail Sheikh Official | Director, Actor & Writer Portfolio</title>
-    <meta name="description" content="Sohail Sheikh - Professional Actor and Writer. Explore my portfolio, acting gallery, and writing works.">
-<meta name="keywords" content="Sohail Sheikh, Sohail Sheikh Actor, Sohail Sheikh Writer, Bollywood Actor, Script Writer, Casting Portfolio">
-<meta name="author" content="Sohail Sheikh">
-
-<meta property="og:title" content="Sohail Sheikh | Actor & Writer Portfolio">
-<meta property="og:description" content="Check out my latest acting clips and writing projects.">
-<meta property="og:image" content="Sohail.jpg">
-<meta property="og:url" content="https://sohailshekh24-bit.github.io/Sohail-actor/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohail Sheikh | Official Director, Actor & Writer Portfolio</title>
     <style>
-        body { background-color: #000; color: #fff; font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 40px 10px; }
-        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid #d4af37; object-fit: cover; margin-bottom: 10px; }
-        h1 { color: #d4af37; font-size: 35px; margin: 10px 0; text-transform: uppercase; letter-spacing: 2px; }
-        .tagline { font-size: 18px; color: #bbb; margin-bottom: 30px; }
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', Arial, sans-serif; text-align: center; margin: 0; padding: 0; line-height: 1.6; }
+        .header { padding: 80px 20px; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('Sohail.JPG'); background-size: cover; background-position: center; border-bottom: 2px solid #d4af37; }
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid #d4af37; object-fit: cover; box-shadow: 0 0 25px rgba(212,175,55,0.4); }
+        h1 { color: #d4af37; font-size: 42px; margin: 15px 0 5px; letter-spacing: 4px; text-transform: uppercase; }
+        .tagline { font-size: 18px; color: #ddd; font-weight: 300; letter-spacing: 1px; }
         
-        .section-box { background: #1a1a1a; padding: 25px; border-radius: 15px; display: inline-block; width: 90%; max-width: 850px; border: 1px solid #333; margin-top: 30px; text-align: left; }
-        h2 { color: #d4af37; border-bottom: 1px solid #333; padding-bottom: 10px; font-size: 24px; }
+        .section-box { background: #111; padding: 30px; border-radius: 15px; display: inline-block; width: 90%; max-width: 900px; border: 1px solid #333; margin: 25px 0; text-align: left; }
+        h2 { color: #d4af37; border-bottom: 2px solid #d4af37; padding-bottom: 8px; font-size: 24px; margin-bottom: 20px; text-transform: uppercase; }
         
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-        .info-item { color: #ccc; font-size: 16px; }
+        .vision-text { font-style: italic; color: #eee; font-size: 17px; line-height: 1.8; border-left: 3px solid #d4af37; padding-left: 20px; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .info-item { background: #1a1a1a; padding: 12px; border-radius: 8px; border: 1px solid #222; }
         .info-item strong { color: #d4af37; }
 
-        .card-img { width: 320px; border-radius: 10px; border: 2px solid #d4af37; margin: 10px; transition: 0.3s; }
-        .card-img:hover { transform: scale(1.05); }
-        
-        .btn { padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin: 10px; transition: 0.3s; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; border: 2px solid #333; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        .card-img { width: 45%; min-width: 280px; border-radius: 10px; border: 1px solid #d4af37; margin: 10px; transition: 0.3s; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+        .gallery-item { width: 100%; border-radius: 8px; aspect-ratio: 3/4; object-fit: cover; border: 1px solid #333; transition: 0.4s; }
+        .gallery-item:hover { transform: scale(1.02); border-color: #d4af37; }
+
+        .btn { padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin: 10px; transition: 0.3s; }
         .whatsapp { background: #25D366; color: #fff; }
-        .youtube { background: #FF0000; color: #fff; }
-        .instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; }
-        .email-btn { background: #d4af37; color: black !important; }
-        .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-.gallery-item {
-    width: 100%;
-    border-radius: 10px;
-    border: 2px solid #333;
-    transition: 0.3s;
-    object-fit: cover;
-    aspect-ratio: 3/4; /* Actor headshots ke liye perfect ratio */
-}
-.gallery-item:hover {
-    border-color: #d4af37;
-    transform: translateY(-5px);
-}
+        .insta { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: #fff; }
+        .cv-btn { background: #d4af37; color: #000; }
+
+        footer { padding: 50px 20px; color: #666; font-size: 14px; border-top: 1px solid #222; }
     </style>
 </head>
 <body>
 
-<body>
+    <div class="header">
+        <img src="Sohail.JPG" alt="Sohail Sheikh" class="profile-img">
+        <h1>SOHAIL SHEIKH</h1>
+        <p class="tagline">Official Director, Actor & Writer | M.A. in Theatre (IKSVV)</p>
+    </div>
 
-    <img src="Sohail.JPG" alt="Sohail Sheikh" class="profile-img">
-    
-    <h1>SOHAIL SHEIKH</h1>
-    <p  class="tagline">Official Director, Actor & Writer | M.A. in Theatre (IKSVV)</p>
+    <div class="section-box" style="background: #0a0a0a;">
+        <h2>🎥 Director's Vision</h2>
+        <p class="vision-text">
+            "23 saal ka theatre anubhav aur filmon ki samajh mujhe seekhati hai ki har scene ek nayi khoj hai. Mere liye Direction aur Acting kahaniyon ko asliyat ke kareeb laane ka ek zariya hain."
+        </p>
+    </div>
 
     <div class="section-box">
-        <h2>Personal Details</h2>
-        <div class="info-grid">
-            <div class="info-item"><strong>Height:</strong> 5'11" (Approx)</div>
-            <div class="info-item"><strong>Languages:</strong> Hindi, Urdu, English</div>
-            <div class="info-item"><strong>Education:</strong> Master of Arts in Theatre Arts</div>
-            <div class="info-item"><strong>Specialization:</strong> Method Acting & Script Writing</div>
-        </div>
-
-        <h2>Theatre & Work Experience</h2>
-        <p>• <strong>23+ Years</strong> of intensive Theatre Experience.</p>
-        <p>• Performed in numerous plays at <strong>IKSVV Khairagarh</strong> and various National Festivals.</p>
-        <p>• Expert in Character Study, Voice Modulation, and Stage Craft.</p>
-        <p>• Working as a <strong>Registered Writer</strong> with Screen Writers Association (SWA).</p>
+        <h2>🎬 Direction Credits (Associate Director)</h2>
+        <ul style="list-style: none; padding: 0; font-size: 18px;">
+            <li style="margin-bottom: 10px;">⭐ <strong>Project Name 1</strong> - Associate Director</li>
+            <li style="margin-bottom: 10px;">⭐ <strong>Project Name 2</strong> - Associate Director</li>
+            <li style="margin-bottom: 10px;">⭐ <strong>Project Name 3</strong> - Associate Director</li>
+        </ul>
     </div>
 
-    <div class="section-box" style="text-align: center;">
-        <h2>Writer Portfolio (SWA Card)</h2>
-        <img src="writer-front safe.jpeg" alt="SWA Front" class="card-img">
+    <div class="section-box">
+        <h2>🎭 Acting Showreel</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/JKbv6aEtgSkDxDYq" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="section-box">
+        <h2>🎭 Work & Experience</h2>
+        <div class="info-grid">
+            <div class="info-item"><strong>Theatre:</strong> 23+ Years Experience</div>
+            <div class="info-item"><strong>Education:</strong> M.A. in Theatre Arts</div>
+            <div class="info-item"><strong>Writing:</strong> Registered with SWA</div>
+            <div class="info-item"><strong>Languages:</strong> Hindi, Urdu, English</div>
+        </div>
+    </div>
+
+    <div class="section-box" style="text-align:center;">
+        <h2>✍️ Writer Portfolio (SWA)</h2>
+        <img src="writer-front-safe.jpeg" alt="SWA Front" class="card-img">
         <img src="writer-back.jpg" alt="SWA Back" class="card-img">
     </div>
-    <div class="section-box" style="text-align: center; width: 100%;">
-    <h2>Performance Gallery</h2>
-    <div class="gallery-grid">
-        <img src="look1.jpeg" alt="Actor Look 1" class="gallery-item">
-        <img src="look2.jpeg" alt="Actor Look 2" class="gallery-item">
-        <img src="look3.jpeg" alt="Actor Look 3" class="gallery-item">
-        <img src="look4.jpeg" alt="Actor Look 4" class="gallery-item">
+
+    <div class="section-box">
+        <h2>📸 Performance Gallery</h2>
+        <div class="gallery-grid">
+            <img src="look1.jpeg" alt="Look 1" class="gallery-item">
+            <img src="look2.jpeg" alt="Look 2" class="gallery-item">
+            <img src="look3.jpeg" alt="Look 3" class="gallery-item">
+            <img src="look4.jpeg" alt="Look 4" class="gallery-item">
+        </div>
     </div>
-</div>
-<div style="text-align: center; margin-top: 20px;">
-    <a href="https://in.docworkspace.com/d/sIBjwv_nsAciWyMsG?lg=en-US&sa=601.1074&ps=1&fn=Bio%20Sohail%20(1).docx" 
-       target="_blank" 
-       style="background: #d4af37; color: black; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);">
-       📄 VIEW FULL BIO-DATA / CV
-    </a>
-</div>
 
-
-
-
-    <div style="margin-top: 40px; padding-bottom: 50px;">
-        <h2 style="border:none; color: #d4af37;">contact</h2>
-        <p>for casting,collaboration, or inquiries:</p>
-        <a href="tel:+917999154500" class="btn whatsapp">📞 WhatsApp / Call</a>
-
-
-<a href="mailto:sohail.shekh24@gmail.com" class="btn" style="background: #d4af37; color: black; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-left: 10px; display: inline-block; margin-top: 10px;">📧 Email Me</a>
-        <a href="https://youtube.com/@mslove1724?si=JKbv6aEtgSkDxDYq" target="_blank" class="btn youtube">🎬 YouTube Channel</a>
-        <a href="https://www.instagram.com/shekhsohail" target="_blank" class="btn instagram">📸 Instagram Profile</a>
+    <div style="margin: 40px 0;">
+        <a href="https://in.docworkspace.com/d/sIBjwv_nsAciWyMsG" target="_blank" class="btn cv-btn">📄 DOWNLOAD FULL CV</a><br>
+        <a href="tel:+917999154500" class="btn whatsapp">📞 WHATSAPP / CALL</a>
+        <a href="https://www.instagram.com/shekhsohail" target="_blank" class="btn insta">📸 INSTAGRAM</a>
     </div>
-<footer style="margin-top: 50px; padding: 20px; text-align: center; border-top: 1px solid #333; color: #888; font-size: 0.9em;">
-    <p>© 2026 Sohail Sheikh. All Rights Reserved.</p>
-</footer>
+
+    <footer>
+        © 2026 SOHAIL SHEIKH. ALL RIGHTS RESERVED. <br>
+        DIRECTOR | ACTOR | WRITER
+    </footer>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
