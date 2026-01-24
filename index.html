@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sohail Sheikh | Director • Actor • Writer</title>
 
-    <meta property="og:title" content="Sohail Sheikh | Director • Actor • Writer">
-    <meta property="og:description" content="23+ Years of Legacy. Projects: Gangs of Raipur, Nacha, Vincent. View Portfolio.">
+    <meta property="og:title" content="Sohail Sheikh | Portfolio">
+    <meta property="og:description" content="23+ Years of Legacy. Director, Actor & SWA Registered Writer.">
     <meta property="og:image" content="Sohail.jpg">
-    <meta property="og:url" content="https://sohailshekh24-bit.github.io/Sohail-actor/">
 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root { --gold: #d4af37; --bg: #050505; --card: #111; --text: #eee; }
-        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        * { box-sizing: border-box; }
         body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; scroll-behavior: smooth; overflow-x: hidden; }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -33,47 +32,11 @@
         .profile-img {
             width: 180px; height: 180px; border-radius: 50%;
             border: 4px solid var(--gold); box-shadow: 0 0 40px rgba(212,175,55,0.4);
-            margin-bottom: 20px; object-fit: cover; animation: fadeIn 1s ease-in;
+            margin-bottom: 20px; object-fit: cover;
         }
 
-        h1 { font-family: 'Cinzel', serif; font-size: clamp(2rem, 8vw, 4rem); color: var(--gold); margin: 0; letter-spacing: 5px; }
-        .hero p { font-size: 1.1rem; letter-spacing: 4px; color: #ccc; text-transform: uppercase; margin: 10px 0; }
-
-        /* Buttons */
-        .cta-group { margin-top: 25px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; padding: 0 15px; }
-        .cta-btn { 
-            padding: 14px 25px; border-radius: 50px; text-decoration: none; 
-            font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 10px; transition: 0.3s;
-        }
-        .cta-call { background: var(--gold); color: #000; }
-        .cta-wa { background: #25d366; color: #fff; }
-        .cta-cv { background: #fff; color: #000; border: 2px solid var(--gold); }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
-        .section-box { margin-bottom: 80px; }
-        h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; font-size: 2.2rem; margin-bottom: 30px; }
-        h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--gold); margin: 15px auto; }
-
-        /* Credit Cards */
-        .credit-category { margin-bottom: 40px; }
-        .credit-category h3 { color: var(--gold); font-family: 'Cinzel', serif; border-left: 4px solid var(--gold); padding-left: 15px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-        .work-card { 
-            background: var(--card); padding: 20px; border-radius: 12px; 
-            margin-bottom: 15px; border: 1px solid #222; transition: 0.3s;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .work-card:hover { border-color: var(--gold); transform: translateX(10px); background: #1a1a1a; }
-        .work-card strong { color: var(--gold); font-size: 1.1rem; }
-        .work-card small { color: #aaa; display: block; margin-top: 4px; }
-        .status-tag { background: rgba(212,175,55,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; border: 1px solid var(--gold); text-transform: uppercase; }
-
-        /* Gallery */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-        .gallery-grid img { 
-            width: 100%; height: 250px; object-fit: cover; border-radius: 10px; 
-            cursor: pointer; transition: 0.4s; border: 1px solid #333;
-        }
-        .gallery-grid img:hover { transform: scale(1.05); border-color: var(--gold); }
+        h1 { font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 8vw, 4.5rem); color: var(--gold); margin: 0; letter-spacing: 5px; }
+        .hero p { font-size: 1.2rem; letter-spacing: 4px; color: #ccc; text-transform: uppercase; margin: 10px 0; }
 
         /* Floating Nav */
         .floating-nav {
@@ -84,10 +47,47 @@
         .floating-nav a { color: #fff; font-size: 1.5rem; transition: 0.3s; }
         .floating-nav a:hover { color: var(--gold); transform: scale(1.2); }
 
-        @media (max-width: 600px) {
-            .floating-nav { width: 95%; justify-content: space-around; padding: 12px; }
-            .work-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .section-box { margin-bottom: 80px; }
+        h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; font-size: 2.2rem; margin-bottom: 30px; }
+
+        /* Writer Card Styling */
+        .writer-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+            border: 2px solid var(--gold);
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
+        .writer-card::before {
+            content: '\f303'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+            position: absolute; right: -20px; bottom: -20px; font-size: 150px; color: rgba(212,175,55,0.05);
+        }
+        .swa-badge {
+            background: var(--gold); color: #000; padding: 5px 15px;
+            font-weight: bold; border-radius: 5px; font-size: 0.8rem;
+            display: inline-block; margin-bottom: 15px;
+        }
+
+        /* Awards Section Styling */
+        .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .award-item {
+            background: #111; border: 1px solid #222; padding: 20px; border-radius: 12px;
+            display: flex; align-items: center; gap: 15px; transition: 0.3s;
+        }
+        .award-item:hover { border-color: var(--gold); background: #1a1a1a; }
+        .award-icon { color: var(--gold); font-size: 2rem; }
+
+        /* Utility */
+        .work-card { background: var(--card); padding: 20px; border-radius: 12px; margin-bottom: 15px; border: 1px solid #222; display: flex; justify-content: space-between; align-items: center; }
+        .status-tag { background: rgba(212,175,55,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; border: 1px solid var(--gold); }
+
+        .cta-btn { padding: 14px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 10px; }
+        .cta-wa { background: #25d366; color: #fff; }
+
+        @media (max-width: 600px) { .work-card { flex-direction: column; align-items: flex-start; gap: 10px; } }
     </style>
 </head>
 <body>
@@ -96,42 +96,58 @@
         <img src="Sohail.jpg" class="profile-img" alt="Sohail Sheikh" onerror="this.src='look1.jpg'">
         <h1>SOHAIL SHEIKH</h1>
         <p>Director • Actor • Writer</p>
-        <div class="cta-group">
-            <a href="tel:+917999154500" class="cta-btn cta-call"><i class="fas fa-phone"></i> CALL</a>
-            <a href="https://wa.me/917999154500" target="_blank" class="cta-btn cta-wa"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
-            <a href="https://in.docworkspace.com/d/sIBjwv_nsAciWyMsG" target="_blank" class="cta-btn cta-cv"><i class="fas fa-file-download"></i> BIO-DATA</a>
+        <div style="margin-top:20px;">
+            <a href="https://wa.me/917999154500" target="_blank" class="cta-btn cta-wa"><i class="fab fa-whatsapp"></i> CONNECT ON WHATSAPP</a>
         </div>
     </header>
 
     <div class="container">
-        
+
         <section class="section-box reveal">
-            <h2>Professional Portfolio</h2>
-            
-            <div class="credit-category">
-                <h3><i class="fas fa-clapperboard"></i> Direction</h3>
-                <div class="work-card"><div><strong>Gangs of Raipur</strong><small>Associate Director</small></div><span class="status-tag">2025</span></div>
-                <div class="work-card"><div><strong>Darling Pyar Jhukta Nahi 2</strong><small>Associate Director</small></div><span class="status-tag">2023</span></div>
-                <div class="work-card"><div><strong>Scripted</strong><small>Creative Director</small></div><span class="status-tag">2022</span></div>
-            </div>
+            <h2>Awards & Achievements</h2>
+            <div class="awards-grid">
+                <div class="award-item">
+                    <i class="fas fa-trophy award-icon"></i>
+                    <div>
+                        <strong style="color:var(--gold);">Best Director Award</strong>
+                        <p style="margin:5px 0 0; font-size:0.9rem;">[Award Name/Film Name]</p>
+                    </div>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-medal award-icon"></i>
+                    <div>
+                        <strong style="color:var(--gold);">Excellence in Theatre</strong>
+                        <p style="margin:5px 0 0; font-size:0.9rem;">23+ Years of Artistic Journey</p>
+                    </div>
+                </div>
+                </div>
+        </section>
 
-            <div class="credit-category">
-                <h3><i class="fas fa-pen-fancy"></i> Writing (Original Works)</h3>
-                <div class="work-card"><div><strong>Nacha (CG)</strong><small>Feature Script: A man with a woman's heart</small></div><span class="status-tag">SWA Regd.</span></div>
-                <div class="work-card"><div><strong>Vincent</strong><small>Experimental: An Actor's Theory</small></div><span class="status-tag">SWA Regd.</span></div>
-                <div class="work-card"><div><strong>Central Jail</strong><small>Feature Film Screenplay</small></div><span class="status-tag">Completed</span></div>
+        <section class="section-box reveal">
+            <h2>Screenwriter Profile</h2>
+            <div class="writer-card">
+                <div class="swa-badge">SWA REGISTERED WRITER</div>
+                <h3 style="font-family:'Cinzel'; color:var(--gold); margin: 10px 0;">Sohail Sheikh</h3>
+                <p style="color:#aaa; font-style:italic; margin-bottom:25px;">"Kalam se kirdar tak, har kahani ek naya safar hai."</p>
+                
+                <div style="border-top: 1px solid #333; padding-top: 20px;">
+                    <div class="work-card"><div><strong>Nacha (CG)</strong><small>Feature Script: A man with a woman's heart</small></div><span class="status-tag">Regd.</span></div>
+                    <div class="work-card"><div><strong>Vincent</strong><small>Experimental: An Actor's Theory</small></div><span class="status-tag">Regd.</span></div>
+                    <div class="work-card"><div><strong>Central Jail</strong><small>Feature Film Screenplay</small></div><span class="status-tag">Completed</span></div>
+                </div>
             </div>
+        </section>
 
-            <div class="credit-category">
-                <h3><i class="fas fa-user-ninja"></i> Acting Credits</h3>
-                <div class="work-card"><div><strong>Romance in Lacuna</strong><small>Main Lead (Protagonist)</small></div><span class="status-tag">Lead</span></div>
-                <div class="work-card"><div><strong>Gangs of Raipur / Jantar Mantar / BTMC</strong><small>Antagonist (Villain)</small></div><span class="status-tag">Villain</span></div>
-            </div>
+        <section class="section-box reveal">
+            <h2>Direction & Acting</h2>
+            <div class="work-card"><div><strong>Gangs of Raipur</strong><small>Associate Director & Villain</small></div><span class="status-tag">2025</span></div>
+            <div class="work-card"><div><strong>Darling Pyar Jhukta Nahi 2</strong><small>Associate Director</small></div><span class="status-tag">2023</span></div>
+            <div class="work-card"><div><strong>Romance in Lacuna</strong><small>Main Lead (Actor)</small></div><span class="status-tag">Lead</span></div>
+        </section>
 
-            <div class="credit-category">
-                <h3><i class="fas fa-masks-theater"></i> Theatre Legacy</h3>
-                <div class="work-card"><div><strong>Pahatiya / Karna Bharm / Anveshak</strong><small>Main Lead - Stage Performances</small></div><span class="status-tag">Classic</span></div>
-            </div>
+        <section class="section-box reveal">
+            <h2>Theatre Legacy</h2>
+            <div class="work-card"><div><strong>Pahatiya / Karna Bharm / Anveshak</strong><small>Main Lead - Stage Performances</small></div><span class="status-tag">Classic</span></div>
         </section>
 
         <section class="section-box reveal">
@@ -141,28 +157,17 @@
             </div>
         </section>
 
-        <section class="section-box reveal">
-            <h2>Looks & Gallery</h2>
-            <div class="gallery-grid">
-                <img src="look1.jpg" onclick="window.open(this.src)" onerror="this.src='Sohail.jpg'">
-                <img src="look2.jpg" onclick="window.open(this.src)" onerror="this.src='Sohail.jpg'">
-                <img src="look3.jpg" onclick="window.open(this.src)" onerror="this.src='Sohail.jpg'">
-                <img src="look4.jpg" onclick="window.open(this.src)" onerror="this.src='Sohail.jpg'">
-            </div>
-        </section>
-
     </div>
 
     <nav class="floating-nav">
         <a href="#top"><i class="fas fa-home"></i></a>
-        <a href="tel:+917999154500"><i class="fas fa-phone"></i></a>
         <a href="https://wa.me/917999154500" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.instagram.com/shekhsohail" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://in.docworkspace.com/d/sIBjwv_nsAciWyMsG" target="_blank"><i class="fas fa-file-pdf"></i></a>
     </nav>
 
     <footer style="text-align:center; padding: 40px 20px 120px; color: #666; font-size: 0.8rem;">
-        © 2026 SOHAIL SHEIKH | DIRECTED BY PASSION
+        © 2026 SOHAIL SHEIKH | THE CINEMATIC LEGACY
     </footer>
 
 </body>
