@@ -28,7 +28,8 @@
         .hero {
             height: 100vh;
             /* Background image fix */
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.jpg');
+            background: /* Is line ko dhoondhen aur badlein */
+background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG');
             background-size: cover; background-position: center;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             text-align: center; border-bottom: 5px solid var(--gold);
@@ -98,7 +99,7 @@
 <body>
 
     <header class="hero" id="top">
-        <img src="Sohail.jpg" class="profile-img" alt="Sohail Sheikh" onerror="this.src='sohail.jpg'">
+       <img src="Sohail.JPG" class="profile-img" alt="Sohail Sheikh">
         <h1>SOHAIL SHEIKH</h1>
         <p>Director • Actor • Writer</p>
         <div class="cta-group">
@@ -239,6 +240,7 @@
     </script>
 </body>
 </html>
+
 
 
 
