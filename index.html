@@ -6,8 +6,8 @@
     <title>Sohail Sheikh | Director • Actor • Writer</title>
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Sohail Sheikh | Director • Actor • Writer">
-    <meta property="og:description" content="23+ Years of Legacy. Writer of Nacha & Vincent. Director of Gangs of Raipur.">
+    <meta property="og:title" content="Sohail Sheikh - Director • Actor • Writer">
+    <meta property="og:description" content="23+ Years Legacy. Writer of Nacha & Vincent. Director of Gangs of Raipur.">
     <meta property="og:image" content="https://sohailshekh24-bit.github.io/Sohail-actor/Sohail.jpg">
     <meta property="og:url" content="https://sohailshekh24-bit.github.io/Sohail-actor/">
 
@@ -17,170 +17,180 @@
     <style>
         :root { --gold: #d4af37; --bg: #050505; --card: #111; --text: #eee; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; overflow-x: hidden; line-height: 1.6; }
+        body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; line-height: 1.6; }
 
-        /* General Styling */
-        h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; font-size: 2.2rem; margin-bottom: 30px; }
-        h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--gold); margin: 15px auto; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
-        .section-box { margin-bottom: 80px; }
+        /* Global Header Style */
+        h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 30px; letter-spacing: 2px; }
+        h2::after { content: ''; display: block; width: 80px; height: 3px; background: var(--gold); margin: 15px auto; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.jpg');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)), url('Sohail.jpg');
             background-size: cover; background-position: center;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            text-align: center; border-bottom: 5px solid var(--gold);
+            text-align: center; border-bottom: 4px solid var(--gold);
         }
         .profile-img {
-            width: 180px; height: 180px; border-radius: 50%;
-            border: 4px solid var(--gold); box-shadow: 0 0 40px rgba(212,175,55,0.4);
-            margin-bottom: 20px; object-fit: cover;
+            width: 190px; height: 190px; border-radius: 50%;
+            border: 4px solid var(--gold); box-shadow: 0 0 50px rgba(212,175,55,0.4);
+            margin-bottom: 25px; object-fit: cover;
         }
-        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2rem, 8vw, 4rem); color: var(--gold); letter-spacing: 5px; }
-        .hero p { font-size: 1.1rem; letter-spacing: 4px; color: #ccc; text-transform: uppercase; margin: 10px 0; }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.2rem, 10vw, 4.5rem); color: var(--gold); letter-spacing: 4px; }
+        .hero p { font-size: 1.2rem; color: #ccc; text-transform: uppercase; margin: 10px 0; letter-spacing: 3px; }
 
-        /* Writer Card Styling (PRO) */
-        .writer-identity {
-            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+        /* Awards Section - Luxury Grid */
+        .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 60px; }
+        .award-box {
+            background: linear-gradient(145deg, #151515, #0a0a0a);
+            border: 1px solid #333; padding: 25px; border-radius: 15px;
+            display: flex; align-items: center; gap: 20px; transition: 0.4s;
+        }
+        .award-box:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .award-box i { color: var(--gold); font-size: 2.5rem; }
+
+        /* WRITER CARD - SPECIAL STYLING */
+        .writer-section { padding: 60px 0; background: rgba(212,175,55,0.03); border-radius: 30px; margin: 40px 0; }
+        .writer-identity-card {
+            background: #111;
             border: 2px solid var(--gold);
             border-radius: 20px;
-            padding: 40px 30px;
+            padding: 40px;
             position: relative;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.8);
-            margin-top: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+            max-width: 800px; margin: 0 auto;
         }
-        .swa-badge {
-            position: absolute; top: -15px; right: 20px;
-            background: var(--gold); color: #000; padding: 5px 15px;
-            font-weight: 900; border-radius: 5px; font-size: 0.75rem;
+        .swa-stamp {
+            position: absolute; top: -20px; right: 30px;
+            background: var(--gold); color: #000; padding: 8px 20px;
+            font-weight: 900; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.4);
         }
-        .writer-card-content h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.8rem; margin-bottom: 15px; }
+        .writer-card-content h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 2rem; margin-bottom: 10px; }
         
-        /* Awards Grid */
-        .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
-        .award-item {
-            background: #111; border-left: 5px solid var(--gold); padding: 20px;
-            border-radius: 10px; display: flex; align-items: center; gap: 15px;
-        }
-        .award-item i { color: var(--gold); font-size: 1.8rem; }
-
         /* Work Cards */
-        .work-list { margin-top: 20px; }
         .work-card { 
-            background: var(--card); padding: 20px; border-radius: 12px; 
-            margin-bottom: 15px; border: 1px solid #222; 
+            background: #1a1a1a; padding: 20px; border-radius: 12px; 
+            margin-bottom: 15px; border: 1px solid #333; 
             display: flex; justify-content: space-between; align-items: center;
-            transition: 0.3s;
         }
-        .work-card:hover { border-color: var(--gold); transform: translateX(5px); }
-        .status-tag { background: rgba(212,175,55,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; border: 1px solid var(--gold); font-weight: bold; }
+        .status-tag { background: rgba(212,175,55,0.1); color: var(--gold); padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; border: 1px solid var(--gold); font-weight: bold; }
 
-        /* Floating Nav */
-        .floating-nav {
-            position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
-            background: rgba(0,0,0,0.95); padding: 12px 35px; border-radius: 100px;
-            border: 1px solid var(--gold); display: flex; gap: 30px; z-index: 9999;
-        }
-        .floating-nav a { color: #fff; font-size: 1.5rem; transition: 0.3s; }
-        .floating-nav a:hover { color: var(--gold); }
+        /* Showreel & Video */
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; border: 2px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .video-wrapper iframe { position: absolute; top:0; left:0; width:100%; height:100%; }
 
         /* Gallery */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
-        .gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 15px; border: 2px solid #222; cursor: pointer; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .gallery img { width: 100%; height: 300px; object-fit: cover; border-radius: 15px; border: 2px solid #222; transition: 0.3s; }
+        .gallery img:hover { border-color: var(--gold); transform: scale(1.02); }
 
-        /* Buttons */
-        .cta-group { margin-top: 25px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
-        .cta-btn { padding: 14px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 10px; }
-        .cta-wa { background: #25d366; color: #fff; }
-        .cta-call { background: var(--gold); color: #000; }
+        /* CTA Buttons */
+        .cta-group { margin-top: 30px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; display: flex; align-items: center; gap: 10px; }
+        .btn-wa { background: #25d366; color: white; }
+        .btn-gold { background: var(--gold); color: black; }
+
+        /* Floating Navigation */
+        .nav-float {
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            background: rgba(0,0,0,0.9); border: 1px solid var(--gold);
+            padding: 15px 40px; border-radius: 100px; display: flex; gap: 40px; z-index: 1000;
+        }
+        .nav-float a { color: white; font-size: 1.4rem; transition: 0.3s; }
+        .nav-float a:hover { color: var(--gold); transform: scale(1.2); }
 
         @media (max-width: 600px) {
+            .nav-float { width: 90%; justify-content: space-around; padding: 15px; }
             .work-card { flex-direction: column; align-items: flex-start; gap: 10px; }
-            .floating-nav { width: 90%; justify-content: space-around; gap: 0; }
+            .writer-identity-card { padding: 30px 20px; }
         }
     </style>
 </head>
 <body>
 
-    <header class="hero" id="top">
+    <header class="hero" id="home">
         <img src="Sohail.jpg" class="profile-img" alt="Sohail Sheikh" onerror="this.src='look1.jpg'">
         <h1>SOHAIL SHEIKH</h1>
         <p>Director • Actor • Writer</p>
         <div class="cta-group">
-            <a href="tel:+917999154500" class="cta-btn cta-call"><i class="fas fa-phone"></i> CALL NOW</a>
-            <a href="https://wa.me/917999154500" target="_blank" class="cta-btn cta-wa"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+            <a href="tel:+917999154500" class="btn btn-gold"><i class="fas fa-phone"></i> CALL</a>
+            <a href="https://wa.me/917999154500" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
         </div>
     </header>
 
     <div class="container">
 
-        <section class="section-box">
-            <h2>Awards & Honors</h2>
+        <section class="container">
+            <h2>Awards & Achievements</h2>
             <div class="awards-grid">
-                <div class="award-item">
+                <div class="award-box">
                     <i class="fas fa-trophy"></i>
-                    <div><strong>Best Director Award</strong><br><small>Contribution to Indian Cinema</small></div>
+                    <div><strong>Best Director</strong><br><small>Indian Cinema Excellence</small></div>
                 </div>
-                <div class="award-item">
-                    <i class="fas fa-medal"></i>
-                    <div><strong>Excellence in Writing</strong><small><br>SWA Registered Professional</small></div>
+                <div class="award-box">
+                    <i class="fas fa-feather-pointed"></i>
+                    <div><strong>Creative Writing Honor</strong><br><small>Storytelling Mastery</small></div>
                 </div>
             </div>
         </section>
 
-        <section class="section-box" id="writer">
+        <section class="writer-section" id="writer">
             <h2>The Screenwriter</h2>
-            <div class="writer-identity">
-                <div class="swa-badge">SWA REGISTERED</div>
+            <div class="writer-identity-card">
+                <div class="swa-stamp">SWA REGISTERED WRITER</div>
                 <div class="writer-card-content">
                     <h3>Sohail Sheikh</h3>
-                    <p style="color: #ccc; margin-bottom: 25px; font-style: italic;">"Crafting stories that breathe. Legacy of 23+ years in Theatre & Film Writing."</p>
+                    <p style="color: #bbb; margin-bottom: 30px; font-style: italic; border-left: 3px solid var(--gold); padding-left: 15px;">
+                        "23 saal ka safar, kalam ki shiddat aur filmon ka junoon. Har screenplay ek naye kirdar ki paidaish hai."
+                    </p>
                     
-                    <div class="work-list">
-                        <div class="work-card">
-                            <div><strong>Nacha (CG)</strong><br><small>Feature Film: A man with a woman's heart</small></div>
-                            <span class="status-tag">SCRIPT READY</span>
-                        </div>
-                        <div class="work-card">
-                            <div><strong>Vincent</strong><br><small>Experimental Drama: An Actor's Theory</small></div>
-                            <span class="status-tag">REGISTERED</span>
-                        </div>
-                        <div class="work-card">
-                            <div><strong>Central Jail</strong><br><small>Crime Thriller Screenplay</small></div>
-                            <span class="status-tag">COMPLETED</span>
-                        </div>
+                    <div class="work-card">
+                        <div><strong>Nacha (CG)</strong><br><small>A man with a woman's heart</small></div>
+                        <span class="status-tag">SWA REGD.</span>
+                    </div>
+                    <div class="work-card">
+                        <div><strong>Vincent</strong><br><small>Experimental: An Actor's Theory</small></div>
+                        <span class="status-tag">SWA REGD.</span>
+                    </div>
+                    <div class="work-card">
+                        <div><strong>Central Jail</strong><br><small>Feature Crime Screenplay</small></div>
+                        <span class="status-tag">COMPLETED</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-box">
+        <section class="container">
             <h2>Filmography</h2>
-            
-            <div class="work-list">
-                <h3 style="color:var(--gold); font-family:'Cinzel'; margin: 20px 0 10px;">Direction</h3>
-                <div class="work-card"><div><strong>Gangs of Raipur</strong><br><small>Associate Director</small></div><span class="status-tag">2025</span></div>
-                <div class="work-card"><div><strong>Darling Pyar Jhukta Nahi 2</strong><br><small>Associate Director</small></div><span class="status-tag">2023</span></div>
-                <div class="work-card"><div><strong>Scripted</strong><br><small>Creative Director</small></div><span class="status-tag">2022</span></div>
+            <div style="margin-bottom: 40px;">
+                <h3 style="color:var(--gold); font-family:'Cinzel'; margin-bottom: 15px;"><i class="fas fa-clapperboard"></i> Direction</h3>
+                <div class="work-card"><div><strong>Gangs of Raipur</strong><small>Associate Director</small></div><span class="status-tag">2025</span></div>
+                <div class="work-card"><div><strong>Darling Pyar Jhukta Nahi 2</strong><small>Associate Director</small></div><span class="status-tag">2023</span></div>
+            </div>
 
-                <h3 style="color:var(--gold); font-family:'Cinzel'; margin: 30px 0 10px;">Acting</h3>
-                <div class="work-card"><div><strong>Romance in Lacuna</strong><br><small>Main Lead (Protagonist)</small></div><span class="status-tag">LEAD</span></div>
-                <div class="work-card"><div><strong>Gangs of Raipur / Jantar Mantar</strong><br><small>Antagonist (Villain)</small></div><span class="status-tag">VILLAIN</span></div>
+            <div style="margin-bottom: 40px;">
+                <h3 style="color:var(--gold); font-family:'Cinzel'; margin-bottom: 15px;"><i class="fas fa-user-ninja"></i> Acting</h3>
+                <div class="work-card"><div><strong>Romance in Lacuna</strong><small>Main Lead</small></div><span class="status-tag">LEAD</span></div>
+                <div class="work-card"><div><strong>Gangs of Raipur / Jantar Mantar</strong><small>Antagonist</small></div><span class="status-tag">VILLAIN</span></div>
+            </div>
+
+            <div>
+                <h3 style="color:var(--gold); font-family:'Cinzel'; margin-bottom: 15px;"><i class="fas fa-masks-theater"></i> Theatre</h3>
+                <div class="work-card"><div><strong>Pahatiya / Karna Bharm / Anveshak</strong><small>Lead Performances</small></div><span class="status-tag">CLASSIC</span></div>
             </div>
         </section>
 
-        <section class="section-box">
+        <section class="container">
             <h2>Showreel</h2>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; border: 2px solid var(--gold);">
-                <iframe src="https://www.youtube.com/embed/JKbv6aEtgSk" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/JKbv6aEtgSk" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
 
-        <section class="section-box">
+        <section class="container">
             <h2>Gallery</h2>
-            <div class="gallery-grid">
+            <div class="gallery">
                 <img src="look1.jpg" onclick="window.open(this.src)" onerror="this.src='Sohail.jpg'">
                 <img src="look2.jpg" onclick="window.open(this.src)" onerror="this.src='Sohail.jpg'">
                 <img src="look3.jpg" onclick="window.open(this.src)" onerror="this.src='Sohail.jpg'">
@@ -190,16 +200,16 @@
 
     </div>
 
-    <nav class="floating-nav">
-        <a href="#top"><i class="fas fa-home"></i></a>
+    <nav class="nav-float">
+        <a href="#home"><i class="fas fa-home"></i></a>
         <a href="#writer"><i class="fas fa-pen-nib"></i></a>
         <a href="https://wa.me/917999154500" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.instagram.com/shekhsohail" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://in.docworkspace.com/d/sIBjwv_nsAciWyMsG" target="_blank"><i class="fas fa-file-pdf" style="color:var(--gold)"></i></a>
+        <a href="https://in.docworkspace.com/d/sIBjwv_nsAciWyMsG" target="_blank"><i class="fas fa-file-pdf"></i></a>
     </nav>
 
-    <footer style="text-align:center; padding: 40px 20px 120px; color: #444; font-size: 0.8rem; border-top: 1px solid #111;">
-        © 2026 SOHAIL SHEIKH | LEGACY IN MOTION
+    <footer style="text-align:center; padding: 60px 20px 120px; color: #555; border-top: 1px solid #222;">
+        © 2026 SOHAIL SHEIKH | BEYOND THE LENS
     </footer>
 
 </body>
