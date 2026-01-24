@@ -8,7 +8,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sohail Sheikh | Director • Actor • Writer">
     <meta property="og:description" content="23+ Years of Legacy. Writer of Nacha & Vincent. Director of Gangs of Raipur.">
-    <meta property="og:image" Sohail.jpg">
+    <meta property="og:image" content="Sohail.jpg">
     <meta property="og:url" content="https://sohailshekh24-bit.github.io/Sohail-actor/">
 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -17,10 +17,57 @@
     <style>
         :root { --gold: #d4af37; --bg: #050505; --card: #111; --text: #eee; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; scroll-behavior: smooth; overflow-x: hidden; }
+        /* Bio Grid Styling */
+.bio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .reveal { animation: fadeIn 0.8s ease-out forwards; }
+.bio-item {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.bio-item:hover {
+    border-color: var(--gold);
+    background: #1a1a1a;
+}
+
+.bio-item i {
+    font-size: 1.5rem;
+    color: var(--gold);
+    width: 40px;
+    text-align: center;
+}
+
+.bio-item strong {
+    display: block;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.bio-item span {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+        body { 
+            background: var(--bg); 
+            color: var(--text); 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; padding: 0; 
+            scroll-behavior: smooth; 
+            overflow-x: hidden; 
+        }
 
         /* Hero Section */
         .hero {
@@ -34,7 +81,7 @@
         .profile-img {
             width: 180px; height: 180px; border-radius: 50%;
             border: 4px solid var(--gold); box-shadow: 0 0 40px rgba(212,175,55,0.4);
-            margin-bottom: 20px; object-fit: cover; animation: fadeIn 1s ease-in;
+            margin-bottom: 20px; object-fit: cover;
         }
 
         h1 { font-family: 'Cinzel', serif; font-size: clamp(2rem, 8vw, 4rem); color: var(--gold); margin: 0; letter-spacing: 5px; }
@@ -53,12 +100,11 @@
 
         .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
         .section-box { margin-bottom: 80px; }
+        
         h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; font-size: 2.2rem; margin-bottom: 30px; }
         h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--gold); margin: 15px auto; }
 
-        /* Credit Cards */
-        .credit-category { margin-bottom: 40px; }
-        .credit-category h3 { color: var(--gold); font-family: 'Cinzel', serif; border-left: 4px solid var(--gold); padding-left: 15px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        /* Work Cards */
         .work-card { 
             background: var(--card); padding: 20px; border-radius: 12px; 
             margin-bottom: 15px; border: 1px solid #222; transition: 0.3s;
@@ -67,33 +113,38 @@
         .work-card:hover { border-color: var(--gold); transform: translateX(10px); background: #1a1a1a; }
         .work-card strong { color: var(--gold); font-size: 1.1rem; }
         .work-card small { color: #aaa; display: block; margin-top: 4px; }
-        .status-tag { background: rgba(212,175,55,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; border: 1px solid var(--gold); text-transform: uppercase; }
+        
+        .status-tag { 
+            background: rgba(212,175,55,0.1); color: var(--gold); 
+            padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; 
+            border: 1px solid var(--gold); text-transform: uppercase; 
+        }
 
-        /* Writer Card Styling */
         .writer-card-highlight {
             border: 2px solid var(--gold);
             background: linear-gradient(145deg, #111 0%, #050505 100%);
             padding: 25px; border-radius: 15px;
         }
 
-        /* Floating Nav */
+        /* Floating Nav (Glassmorphism) */
         .floating-nav {
-    position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
-    background: rgba(17, 17, 17, 0.8); /* Translucent */
-    backdrop-filter: blur(15px); /* Blur effect */
-    -webkit-backdrop-filter: blur(15px);
-    padding: 12px 35px; border-radius: 100px;
-    border: 1px solid rgba(214, 175, 55, 0.3); 
-    display: flex; gap: 30px; z-index: 9999;
-}
+            position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
+            background: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            padding: 12px 35px; border-radius: 100px;
+            border: 1px solid rgba(214, 175, 55, 0.3); 
+            display: flex; gap: 30px; z-index: 9999;
         }
         .floating-nav a { color: #fff; font-size: 1.5rem; transition: 0.3s; }
+        .floating-nav a:hover { color: var(--gold); transform: scale(1.2); }
 
+        /* Gallery */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-        .gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; cursor: pointer; border: 1px solid #333; }
+        .gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; border: 1px solid #333; }
 
         @media (max-width: 600px) {
             .work-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .floating-nav { gap: 20px; padding: 10px 25px; }
         }
     </style>
 </head>
@@ -110,7 +161,55 @@
             <a href="https://in.docworkspace.com/d/sIBjwv_nsAciWyMsG" target="_blank" class="cta-btn cta-cv"><i class="fas fa-file-pdf"></i> BIO-DATA</a>
         </div>
     </header>
-
+<section class="container" style="padding-top: 20px; padding-bottom: 20px;">
+    <div class="section-box reveal">
+        <h2>Professional Profile</h2>
+        <div class="bio-grid">
+            <div class="bio-item">
+                <i class="fas fa-ruler-vertical"></i>
+                <div>
+                    <strong>Height</strong>
+                    <span>5'8" (Approx)</span>
+                </div>
+            </div>
+            <div class="bio-item">
+                <i class="fas fa-language"></i>
+                <div>
+                    <strong>Languages</strong>
+                    <span>Hindi, Chhattisgarhi, English</span>
+                </div>
+            </div>
+            <div class="bio-item">
+                <i class="fas fa-user-tie"></i>
+                <div>
+                    <strong>Experience</strong>
+                    <span>23+ Years (Theatre & Film)</span>
+                </div>
+            </div>
+            <div class="bio-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <strong>Location</strong>
+                    <span>Raipur, Chhattisgarh</span>
+                </div>
+            </div>
+            <div class="bio-item">
+                <i class="fas fa-theater-masks"></i>
+                <div>
+                    <strong>Special Skills</strong>
+                    <span>Method Acting, Script Doctoring</span>
+                </div>
+            </div>
+            <div class="bio-item">
+                <i class="fas fa-clapperboard"></i>
+                <div>
+                    <strong>Affiliations</strong>
+                    <span>SWA Registered</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <div class="container">
         
         <section class="section-box reveal">
@@ -132,12 +231,12 @@
         <section class="section-box reveal">
             <h2>Filmography</h2>
             <div class="credit-category">
-                <h3>Direction</h3>
+                <h3 style="color:var(--gold); font-family:'Cinzel'; border-left:4px solid var(--gold); padding-left:15px;">Direction</h3>
                 <div class="work-card"><div><strong>Gangs of Raipur</strong><small>Associate Director</small></div><span class="status-tag">2025</span></div>
                 <div class="work-card"><div><strong>Darling Pyar Jhukta Nahi 2</strong><small>Associate Director</small></div><span class="status-tag">2023</span></div>
             </div>
-            <div class="credit-category">
-                <h3>Acting</h3>
+            <div class="credit-category" style="margin-top:30px;">
+                <h3 style="color:var(--gold); font-family:'Cinzel'; border-left:4px solid var(--gold); padding-left:15px;">Acting</h3>
                 <div class="work-card"><div><strong>Romance in Lacuna</strong><small>Main Lead</small></div><span class="status-tag">LEAD</span></div>
                 <div class="work-card"><div><strong>Gangs of Raipur</strong><small>Antagonist</small></div><span class="status-tag">VILLAIN</span></div>
             </div>
@@ -146,17 +245,17 @@
         <section class="section-box reveal">
             <h2>Showreel</h2>
             <div style="position: relative; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; border: 2px solid var(--gold);">
-                <iframe src="https://www.youtube.com/embed/JKbv6aEtgSk" style="position: absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/JKbv6aEtgSk" style="position: absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allowfullscreen loading="lazy"></iframe>
             </div>
         </section>
 
         <section class="section-box reveal">
             <h2>Gallery</h2>
             <div class="gallery-grid">
-                <img src="look1.jpg" onerror="this.src='Sohail.jpg'">
-                <img src="look2.jpg" onerror="this.src='Sohail.jpg'">
-                <img src="look3.jpg" onerror="this.src='Sohail.jpg'">
-                <img src="look4.jpg" onerror="this.src='Sohail.jpg'">
+                <img src="look1.jpg" onerror="this.src='Sohail.jpg'" loading="lazy">
+                <img src="look2.jpg" onerror="this.src='Sohail.jpg'" loading="lazy">
+                <img src="look3.jpg" onerror="this.src='Sohail.jpg'" loading="lazy">
+                <img src="look4.jpg" onerror="this.src='Sohail.jpg'" loading="lazy">
             </div>
         </section>
 
@@ -173,26 +272,23 @@
         © 2026 SOHAIL SHEIKH | BEYOND THE LENS
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'all 0.8s ease-out';
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
-
-<script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'all 0.8s ease-out';
-        observer.observe(section);
-    });
-</script>
-
-
 
