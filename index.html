@@ -78,9 +78,14 @@
 
         /* Floating Nav */
         .floating-nav {
-            position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
-            background: rgba(0,0,0,0.95); padding: 12px 35px; border-radius: 100px;
-            border: 1px solid var(--gold); display: flex; gap: 30px; z-index: 9999;
+    position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
+    background: rgba(17, 17, 17, 0.8); /* Translucent */
+    backdrop-filter: blur(15px); /* Blur effect */
+    -webkit-backdrop-filter: blur(15px);
+    padding: 12px 35px; border-radius: 100px;
+    border: 1px solid rgba(214, 175, 55, 0.3); 
+    display: flex; gap: 30px; z-index: 9999;
+}
         }
         .floating-nav a { color: #fff; font-size: 1.5rem; transition: 0.3s; }
 
@@ -170,3 +175,21 @@
 
 </body>
 </html>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'all 0.8s ease-out';
+        observer.observe(section);
+    });
+</script>
