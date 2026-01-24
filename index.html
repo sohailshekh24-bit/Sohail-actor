@@ -27,9 +27,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            /* Background image fix */
-            background: /* Is line ko dhoondhen aur badlein */
-background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG');
             background-size: cover; background-position: center;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             text-align: center; border-bottom: 5px solid var(--gold);
@@ -73,7 +71,10 @@ background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG')
             background: var(--card); padding: 20px; border-radius: 12px; margin-bottom: 15px; 
             border: 1px solid #222; transition: 0.3s; display: flex; justify-content: space-between; align-items: center;
         }
-        .status-tag { background: rgba(212,175,55,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; border: 1px solid var(--gold); }
+        .work-card:hover { border-color: var(--gold); transform: translateX(10px); background: #1a1a1a; }
+        .work-card strong { color: var(--gold); font-size: 1.1rem; }
+        .work-card small { color: #aaa; display: block; margin-top: 4px; }
+        .status-tag { background: rgba(212,175,55,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; border: 1px solid var(--gold); text-transform: uppercase; }
 
         .writer-card-highlight { border: 2px solid var(--gold); background: linear-gradient(145deg, #111 0%, #050505 100%); padding: 25px; border-radius: 15px; }
 
@@ -87,7 +88,7 @@ background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG')
         .floating-nav a:hover { color: var(--gold); transform: scale(1.2); }
 
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-        .gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; border: 1px solid #333; }
+        .gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 100px 0 100px 0; border: 1px solid #333; }
 
         .submit-btn { background: var(--gold); color: #000; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 700; cursor: pointer; width: 100%; }
 
@@ -99,7 +100,7 @@ background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG')
 <body>
 
     <header class="hero" id="top">
-       <img src="Sohail.JPG" class="profile-img" alt="Sohail Sheikh">
+        <img src="Sohail.JPG" class="profile-img" alt="Sohail Sheikh">
         <h1>SOHAIL SHEIKH</h1>
         <p>Director • Actor • Writer</p>
         <div class="cta-group">
@@ -115,12 +116,12 @@ background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG')
         <section class="section-box reveal">
             <h2>Professional Profile</h2>
             <div class="bio-grid">
-                <div class="bio-item"><i class="fas fa-ruler-vertical"></i><div><strong>Height</strong><span>5'11"</span></div></div>
-                <div class="bio-item"><i class="fas fa-language"></i><div><strong>Languages</strong><span>Hindi,urdu, Chhattisgarhi, English</span></div></div>
-                <div class="bio-item"><i class="fas fa-user-tie"></i><div><strong>Experience</strong><span>23+ Years (Theatre & Film)</span></div></div>
-                <div class="bio-item"><i class="fas fa-map-marker-alt"></i><div><strong>Location</strong><span>Raipur, Chhattisgarh</span></div></div>
-                <div class="bio-item"><i class="fas fa-theater-masks"></i><div><strong>Special Skills</strong><span>Method Acting, Scripting</span></div></div>
-                <div class="bio-item"><i class="fas fa-clapperboard"></i><div><strong>Affiliations</strong><span>SWA Registered</span></div></div>
+                <div class="bio-item"><i class="fas fa-university"></i><div><strong>Education</strong><span>M.A. Theatre (Merit) - IKSV </span></div></div>
+                <div class="bio-item"><i class="fas fa-language"></i><div><strong>Languages</strong><span>Hindi, Urdu, Chhattisgarhi, English </span></div></div>
+                <div class="bio-item"><i class="fas fa-heart"></i><div><strong>Foundation</strong><span>Founder: Willing Hearts </span></div></div>
+                <div class="bio-item"><i class="fas fa-map-marker-alt"></i><div><strong>Location</strong><span>Rajnandgaon, Chhattisgarh [cite: 75]</span></div></div>
+                <div class="bio-item"><i class="fas fa-theater-masks"></i><div><strong>Specialization</strong><span>Bharatanatyam & Method Acting [cite: 3, 13]</span></div></div>
+                <div class="bio-item"><i class="fas fa-clapperboard"></i><div><strong>Affiliations</strong><span>SWA Registered Member [cite: 7]</span></div></div>
             </div>
         </section>
 
@@ -130,53 +131,56 @@ background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG')
                 <div style="margin-bottom: 30px; position: relative;">
                     <div style="position: absolute; left: -41px; top: 0; width: 20px; height: 20px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 10px var(--gold);"></div>
                     <strong style="color: var(--gold); font-size: 1.2rem;">2001 - Present</strong>
-                    <p style="margin: 5px 0; font-weight: 600;">The Journey Begins</p>
-                    <small style="color: #aaa;">23+ years of contribution to Chhattisgarhi and Indian Theatre as a performer and visionary.</small>
+                    <p style="margin: 5px 0; font-weight: 600;">The Journey of Willing Hearts </p>
+                    <small style="color: #aaa;">14+ years dedicated to promoting Indian Arts in Chhattisgarh through his foundation. </small>
                 </div>
                 <div style="margin-bottom: 30px; position: relative;">
                     <div style="position: absolute; left: -41px; top: 0; width: 20px; height: 20px; background: var(--gold); border-radius: 50%;"></div>
-                    <strong style="color: var(--gold); font-size: 1.1rem;">Notable Plays</strong>
-                    <p style="margin: 5px 0;">pahatiya,karanbharam,anveshak, & Various Classics</p>
-                    <small style="color: #aaa;">Directed and acted in numerous stage productions focusing on social realism and folk art.</small>
+                    <strong style="color: var(--gold); font-size: 1.1rem;">Notable Plays & Performance</strong>
+                    <p style="margin: 5px 0;">Pahatiya, Karanbharam, Anveshak, & Chanakya [cite: 53, 63, 64, 65]</p>
+                    <small style="color: #aaa;">Directed and performed at National Youth Festivals in Ranchi and Kolhapur. [cite: 42, 43, 48]</small>
                 </div>
             </div>
         </section>
 
         <section class="section-box reveal">
             <h2>Awards & Achievements</h2>
-            <div class="work-card"><div><strong>Best Director Award</strong><small>Contribution to Indian Cinema</small></div><i class="fas fa-trophy" style="color:var(--gold)"></i></div>
-            <div class="work-card"><div><strong>Excellence in Theatre</strong><small>23+ Years of Legacy</small></div><i class="fas fa-medal" style="color:var(--gold)"></i></div>
+            <div class="work-card"><div><strong>Kala Mani Award</strong><small>Ministry of Culture, Govt. of India [cite: 15]</small></div><i class="fas fa-medal" style="color:var(--gold)"></i></div>
+            <div class="work-card"><div><strong>Kala Ratna Award</strong><small>Hindustan Arts & Music Society, Kolkata [cite: 14]</small></div><i class="fas fa-trophy" style="color:var(--gold)"></i></div>
+            <div class="work-card"><div><strong>Excellence in Theatre</strong><small>23+ Years of Artistic Contribution [cite: 2, 48]</small></div><i class="fas fa-star" style="color:var(--gold)"></i></div>
         </section>
 
         <section class="section-box reveal">
             <h2>Screenwriter Profile</h2>
             <div class="writer-card-highlight">
-                <h3 style="color:var(--gold); font-family:'Cinzel'; margin-bottom:20px;"><i class="fas fa-pen-nib"></i> SWA Registered Writer</h3>
+                <h3 style="color:var(--gold); font-family:'Cinzel'; margin-bottom:20px;"><i class="fas fa-pen-nib"></i> SWA Registered Writer [cite: 7]</h3>
                 <div class="work-card">
-                    <div><strong>Nacha (CG)</strong><small>Feature Film Script | Genre: Drama</small>
-                    <p style="font-size: 0.85rem; color: #888; margin-top: 8px;"><em>A deep dive into the folk culture of Chhattisgarh, exploring the lives of Nacha artists.</em></p></div>
+                    <div><strong>Nacha: A Man with a Woman’s Heart</strong><small>Feature Film Script | Recent Work [cite: 21]</small>
+                    <p style="font-size: 0.85rem; color: #888; margin-top: 8px;"><em>Exploring the heritage of Chhattisgarh through the lens of Nacha artists. [cite: 73]</em></p></div>
                     <span class="status-tag">Regd.</span>
                 </div>
                 <div class="work-card">
-                    <div><strong>Vincent</strong><small>Experimental Theory | Genre: Psychological</small>
-                    <p style="font-size: 0.85rem; color: #888; margin-top: 8px;"><em>An avant-garde exploration of artistic madness and the subconscious mind.</em></p></div>
-                    <span class="status-tag">Regd.</span>
-                </div>
-                <div class="work-card">
-                    <div><strong>Central Jail</strong><small>Full Screenplay | Genre: Crime Thriller</small>
-                    <p style="font-size: 0.85rem; color: #888; margin-top: 8px;"><em>A gripping narrative centered around the complex dynamics inside a high-security prison.</em></p></div>
+                    <div><strong>Central Jail</strong><small>Full Screenplay | Genre: Crime Thriller [cite: 19]</small>
+                    <p style="font-size: 0.85rem; color: #888; margin-top: 8px;"><em>A gripping narrative centered around prison dynamics. [cite: 19]</em></p></div>
                     <span class="status-tag">Draft Done</span>
+                </div>
+                <div class="work-card">
+                    <div><strong>Kill for Likes</strong><small>Screenplay | Modern Society Concept [cite: 20]</small>
+                    <p style="font-size: 0.85rem; color: #888; margin-top: 8px;"><em>Thematic act focusing on the psychological impact of social media. [cite: 5, 20]</em></p></div>
+                    <span class="status-tag">Concept</span>
                 </div>
             </div>
         </section>
 
         <section class="section-box reveal">
             <h2>Filmography</h2>
-            <h3 style="color:var(--gold); font-family:'Cinzel'; border-left:4px solid var(--gold); padding-left:15px;">Direction</h3>
+            <h3 style="color:var(--gold); font-family:'Cinzel'; border-left:4px solid var(--gold); padding-left:15px;">Direction & Production</h3>
+            <div class="work-card"><div><strong>Life Kabbadi</strong><small>Assistant Director </small></div><span class="status-tag">Feature</span></div>
+            <div class="work-card"><div><strong>I Am Detective (TV Serial)</strong><small>Theme Director </small></div><span class="status-tag">Television</span></div>
             <div class="work-card"><div><strong>Gangs of Raipur</strong><small>Associate Director</small></div><span class="status-tag">2025</span></div>
-            <div class="work-card"><div><strong>Darling Pyar Jhukta Nahi 2</strong><small>Associate Director</small></div><span class="status-tag">2023</span></div>
+            
             <h3 style="color:var(--gold); font-family:'Cinzel'; border-left:4px solid var(--gold); padding-left:15px; margin-top:30px;">Acting</h3>
-            <div class="work-card"><div><strong>Romance in Lacuna</strong><small>Main Lead</small></div><span class="status-tag">LEAD</span></div>
+            <div class="work-card"><div><strong>Romance in Lacuna</strong><small>Main Lead (Actor) [cite: 9]</small></div><span class="status-tag">LEAD</span></div>
             <div class="work-card"><div><strong>Gangs of Raipur</strong><small>Antagonist</small></div><span class="status-tag">VILLAIN</span></div>
         </section>
 
@@ -190,10 +194,10 @@ background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG')
         <section class="section-box reveal">
             <h2>Gallery</h2>
             <div class="gallery-grid">
-                <img src="look1.jpg" onerror="this.src='Sohail.jpg'" loading="lazy">
-                <img src="look2.jpg" onerror="this.src='Sohail.jpg'" loading="lazy">
-                <img src="look3.jpg" onerror="this.src='Sohail.jpg'" loading="lazy">
-                <img src="look4.jpg" onerror="this.src='Sohail.jpg'" loading="lazy">
+                <img src="look1.jpg" onerror="this.src='Sohail.JPG'" loading="lazy">
+                <img src="look2.jpg" onerror="this.src='Sohail.JPG'" loading="lazy">
+                <img src="look3.jpg" onerror="this.src='Sohail.JPG'" loading="lazy">
+                <img src="look4.jpg" onerror="this.src='Sohail.JPG'" loading="lazy">
             </div>
         </section>
 
@@ -240,4 +244,3 @@ background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG')
     </script>
 </body>
 </html>
-
