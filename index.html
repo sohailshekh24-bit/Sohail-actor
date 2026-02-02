@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sohail Sheikh | Actor • Writer • Director">
     <meta property="og:description" content="M.A. Theatre (Merit). Award-winning Actor & Writer. Founder of Willing Hearts.">
-    <meta property="og:image" content=https://github.com/sohailshekh24-bit/Sohail-actor/blob/main/Sohail.JPG?raw=true
+    <meta property="og:image" content="https://github.com/sohailshekh24-bit/Sohail-actor/blob/main/Sohail.JPG?raw=true">
     <meta property="og:url" content="https://sohailshekh24-bit.github.io/Sohail-actor/">
 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -27,6 +27,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
+            /* Background image yahan change karein agar cover photo badalni ho */
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Sohail.JPG');
             background-size: cover; background-position: center;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -86,19 +87,39 @@
         .floating-nav a:hover { color: var(--gold); transform: scale(1.2); }
 
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 15px; border: 1px solid #333; }
+        /* Added cursor pointer to indicate clickable */
+        .gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 15px; border: 1px solid #333; cursor: pointer; transition: 0.3s; }
+        .gallery-grid img:hover { transform: scale(1.02); border-color: var(--gold); }
 
         .submit-btn { background: var(--gold); color: #000; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 700; cursor: pointer; width: 100%; }
 
+        /* LIGHTBOX STYLES (NEW) */
+        .modal {
+            display: none; 
+            position: fixed; z-index: 10000; padding-top: 60px; 
+            left: 0; top: 0; width: 100%; height: 100%; 
+            overflow: auto; background-color: rgba(0,0,0,0.9); 
+        }
+        .modal-content {
+            margin: auto; display: block; width: 80%; max-width: 800px; border: 2px solid var(--gold); border-radius: 10px;
+        }
+        .close {
+            position: absolute; top: 15px; right: 35px; 
+            color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer;
+        }
+        .close:hover, .close:focus { color: var(--gold); text-decoration: none; cursor: pointer; }
+        
         @media (max-width: 600px) {
             .work-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .modal-content { width: 95%; }
         }
     </style>
 </head>
 <body>
 
     <header class="hero" id="top">
-        <img src="Sohail.JPG" class="profile-img" alt="Sohail Sheikh">
+        <img src="look2.jpg" class="profile-img" alt="Sohail Sheikh">
+        
         <h1>SOHAIL SHEIKH</h1>
         <p>Actor • Writer • Director</p>
         <div class="cta-group">
@@ -125,16 +146,16 @@
 
         <section class="section-box reveal">
             <h2>Featured Work</h2>
-           <div align="center">
-  <h2>My Latest Showreel</h2>
-  <iframe width="100%" height="315" 
-  src="https://www.youtube.com/embed/VOVXIB72YJI?autoplay=1&mute=1" 
-  title="Sohail Sheikh Acting Showreel" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  allowfullscreen>
-  </iframe>
-</div>
+            <div align="center">
+                <h3>My Latest Showreel</h3>
+                <iframe width="100%" height="315" 
+                src="https://youtu.be/UoFBX0DH7xw?autoplay=0" 
+                title="Sohail Sheikh Acting Showreel" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+                </iframe>
+            </div>
             <p style="text-align: center; margin-top: 20px; font-style: italic; color: #aaa;">
                 "For a complete look at my performances, please visit my <a href="https://youtube.com/@sohailshekhofficial" target="_blank" style="color: var(--gold);">Official YouTube Portfolio</a>."
             </p>
@@ -177,10 +198,10 @@
         <section class="section-box reveal">
             <h2>Gallery</h2>
             <div class="gallery-grid">
-                <img src="look1.jpg" onerror="this.src='Sohail.JPG'">
-                <img src="look2.jpg" onerror="this.src='Sohail.JPG'">
-                <img src="look3.jpg" onerror="this.src='Sohail.JPG'">
-                <img src="look4.jpg" onerror="this.src='Sohail.JPG'">
+                <img src="look1.jpg" onerror="this.src='Sohail.JPG'" onclick="openModal(this)">
+                <img src="look2.jpg" onerror="this.src='Sohail.JPG'" onclick="openModal(this)">
+                <img src="look3.jpg" onerror="this.src='Sohail.JPG'" onclick="openModal(this)">
+                <img src="look4.jpg" onerror="this.src='Sohail.JPG'" onclick="openModal(this)">
             </div>
         </section>
 
@@ -192,6 +213,11 @@
                 <button type="submit" class="submit-btn">SEND INQUIRY</button>
             </form>
         </section>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
     </div>
 
     <nav class="floating-nav">
@@ -206,6 +232,7 @@
     </footer>
 
     <script>
+        // Scroll Animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -221,6 +248,28 @@
             section.style.transition = 'all 0.8s ease-out';
             observer.observe(section);
         });
+
+        // Lightbox Functions
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "flex";
+            modal.style.justifyContent = "center";
+            modal.style.alignItems = "center";
+            modalImg.src = element.src;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
