@@ -27,7 +27,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            /* Background Image */
+            /* Aapne look2.jpg manga tha, wahi set kiya hai */
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('look2.jpg');
             background-size: cover; background-position: center;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -126,5 +126,150 @@
             <a href="tel:+917999154500" class="cta-btn cta-call"><i class="fas fa-phone"></i> CALL</a>
             <a href="https://youtube.com/@sohailshekhofficial" target="_blank" class="cta-btn cta-yt"><i class="fab fa-youtube"></i> YOUTUBE</a>
             <a href="https://wa.me/917999154500" target="_blank" class="cta-btn cta-wa"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
-            <a href="https://in.docworkspace.com/d/sIBjwv_nsAciWyMsG" target="_blank" class="cta-btn c
+            <a href="https://in.docworkspace.com/d/sIBjwv_nsAciWyMsG" target="_blank" class="cta-btn cta-cv"><i class="fas fa-file-pdf"></i> DOWNLOAD CV</a>
+        </div>
+    </header>
 
+    <div class="container">
+        
+        <section class="section-box reveal">
+            <h2>Professional Profile</h2>
+            <div class="bio-grid">
+                <div class="bio-item"><i class="fas fa-university"></i><div><strong>Education</strong><span>M.A. Theatre (Merit) | B.A. Theatre & Bharatanatyam</span></div></div>
+                <div class="bio-item"><i class="fas fa-award"></i><div><strong>Key Achievements</strong><span>Kala Ratna & Kala Mani Awardee</span></div></div>
+                <div class="bio-item"><i class="fas fa-language"></i><div><strong>Languages</strong><span>Hindi, English, Urdu, Chhattisgarhi</span></div></div>
+                <div class="bio-item"><i class="fas fa-clapperboard"></i><div><strong>Current Project</strong><span>Aspect Ratio (Short Film)</span></div></div>
+                <div class="bio-item"><i class="fas fa-heart"></i><div><strong>Foundation</strong><span>Founder & Director: Willing Hearts</span></div></div>
+                <div class="bio-item"><i class="fas fa-pen-nib"></i><div><strong>Affiliations</strong><span>SWA Registered Member</span></div></div>
+            </div>
+        </section>
+
+        <section class="section-box reveal">
+            <h2>Featured Work</h2>
+            <div align="center">
+                <h3>My Latest Showreel</h3>
+                <iframe width="100%" height="315" 
+                src="https://www.youtube.com/embed/UoFBX0DH7xw" 
+                title="Sohail Sheikh Acting Showreel" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+                </iframe>
+            </div>
+            <p style="text-align: center; margin-top: 20px; font-style: italic; color: #aaa;">
+                "For a complete look at my performances, please visit my <a href="https://youtube.com/@sohailshekhofficial" target="_blank" style="color: var(--gold);">Official YouTube Portfolio</a>."
+            </p>
+        </section>
+
+        <section class="section-box reveal">
+            <h2>Theatre Journey</h2>
+            <div style="border-left: 2px solid var(--gold); margin-left: 20px; padding-left: 30px;">
+                <div style="margin-bottom: 30px; position: relative;">
+                    <div style="position: absolute; left: -41px; top: 0; width: 20px; height: 20px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 10px var(--gold);"></div>
+                    <strong style="color: var(--gold); font-size: 1.2rem;">Director & Founder</strong>
+                    <p style="margin: 5px 0; font-weight: 600;">Willing Hearts Foundation</p>
+                    <small style="color: #aaa;">14+ years dedicated to promoting Indian Arts and Culture through theatrical excellence.</small>
+                </div>
+                <div style="margin-bottom: 30px; position: relative;">
+                    <div style="position: absolute; left: -41px; top: 0; width: 20px; height: 20px; background: var(--gold); border-radius: 50%;"></div>
+                    <strong style="color: var(--gold); font-size: 1.1rem;">Acclaimed Plays</strong>
+                    <p style="margin: 5px 0;">Karnabhram, Pahatiya, Chanakya & Andher Nagari</p>
+                    <small style="color: #aaa;">Showcased at prestigious venues like Shaheed Bhavan (Bhopal) and National Festivals.</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-box reveal">
+            <h2>Screenwriter Profile</h2>
+            <div class="work-card">
+                <div><strong>Nacha: A Man with a Woman’s Heart</strong><small>Feature Script | Exploring Chhattisgarh's Heritage</small></div>
+                <span class="status-tag">Registered</span>
+            </div>
+            <div class="work-card">
+                <div><strong>Central Jail</strong><small>Full Screenplay | Crime Thriller</small></div>
+                <span class="status-tag">Completed</span>
+            </div>
+            <div class="work-card">
+                <div><strong>Kill for Likes</strong><small>Psychological Drama | Modern Society Concept</small></div>
+                <span class="status-tag">Draft</span>
+            </div>
+        </section>
+
+        <section class="section-box reveal">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="look1.jpg" onerror="this.src='Sohail.JPG'" onclick="openModal(this)">
+                <img src="look2.jpg" onerror="this.src='Sohail.JPG'" onclick="openModal(this)">
+                <img src="look3.jpg" onerror="this.src='Sohail.JPG'" onclick="openModal(this)">
+                <img src="look4.jpg" onerror="this.src='Sohail.JPG'" onclick="openModal(this)">
+            </div>
+        </section>
+
+        <section class="section-box reveal" id="contact">
+            <h2>Work Inquiry</h2>
+            <form action="mailto:Sohail.shekh24@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="Name" placeholder="Your Name" style="width:100%; padding:15px; margin-bottom:15px; background:#111; border:1px solid #333; color:#fff; border-radius:8px;" required>
+                <textarea name="Message" rows="5" placeholder="Project or Audition Details" style="width:100%; padding:15px; margin-bottom:15px; background:#111; border:1px solid #333; color:#fff; border-radius:8px;" required></textarea>
+                <button type="submit" class="submit-btn">SEND INQUIRY</button>
+            </form>
+        </section>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <nav class="floating-nav">
+        <a href="#top"><i class="fas fa-home"></i></a>
+        <a href="#contact"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/917999154500" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/shekhsohail" target="_blank"><i class="fab fa-instagram"></i></a>
+    </nav>
+
+    <footer style="text-align:center; padding: 40px 20px 120px; color: #444; font-size: 0.8rem;">
+        © 2026 SOHAIL SHEIKH | BEYOND THE LENS
+    </footer>
+
+    <script>
+        // 1. Scroll Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'all 0.8s ease-out';
+            observer.observe(section);
+        });
+
+        // 2. Lightbox (Gallery Zoom) Functions
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "flex";
+            modal.style.justifyContent = "center";
+            modal.style.alignItems = "center";
+            modalImg.src = element.src;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
